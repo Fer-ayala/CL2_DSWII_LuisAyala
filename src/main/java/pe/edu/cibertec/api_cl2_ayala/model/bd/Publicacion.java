@@ -12,19 +12,12 @@ public class Publicacion {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column(name = "IdPublicacion")
-    private Integer idPublicacion;
-
-    @Column(name = "Titulo", nullable = false, length = 250)
+    private Integer idpublicacion;
     private String titulo;
-
-    @Column(name = "Resumen", nullable = false, length = 250)
     private String resumen;
-
-    @Column(name = "FechPublicacion", nullable = false)
-    private Date fechPublicacion;
+    private Date fechpublicacion;
 
     @ManyToOne
-    @JoinColumn(name = "IdAutor", nullable = false)
+    @JoinColumn(name = "idautor", nullable = false)
     private Autor autor;
 }
